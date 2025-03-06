@@ -1,7 +1,6 @@
 
 import React from "react";
-import { cn } from "@/lib/utils";
-import { Instagram, Mail } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -9,13 +8,13 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-3">
+            <div className="h-8">
               <img 
                 src="/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
                 alt="500BITY" 
-                className="h-8"
+                className="h-full"
               />
-            </h3>
+            </div>
             <p className="text-gray-300 max-w-xs">
               Transformando ideias em campanhas memoráveis que elevam sua marca ao próximo nível.
             </p>
