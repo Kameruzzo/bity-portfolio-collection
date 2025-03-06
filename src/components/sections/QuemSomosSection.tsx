@@ -101,26 +101,10 @@ const QuemSomosSection: React.FC = () => {
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-r from-bity-600/20 to-transparent z-10 rounded-2xl"></div>
               <img 
-                src="/lovable-uploads/699eb220-e15a-4e29-8a3b-15fdef40684b.png" 
+                src="/lovable-uploads/fd0dc4d4-7335-42f4-a7de-c32556df9b42.png" 
                 alt="Equipe 500BITY" 
                 className="w-full h-full object-cover object-center rounded-2xl transition-transform duration-700 hover:scale-105"
               />
-            </div>
-            
-            {/* Stats */}
-            <div className="absolute -bottom-10 left-10 right-10 glass-card p-5 z-20 grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div className="text-3xl font-bold text-bity-600">10+</div>
-                <div className="text-sm text-gray-600">Anos de experiência</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-bity-600">250+</div>
-                <div className="text-sm text-gray-600">Projetos concluídos</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-bity-600">96%</div>
-                <div className="text-sm text-gray-600">Clientes satisfeitos</div>
-              </div>
             </div>
           </div>
         </div>

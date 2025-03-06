@@ -41,11 +41,12 @@ export function Header() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center">
-          <a
-            href="#"
-            className="text-2xl md:text-3xl font-bold tracking-tighter"
-          >
-            <span className="font-black">500</span>BITY
+          <a href="#" className="h-10">
+            <img 
+              src="/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
+              alt="500BITY" 
+              className="h-full"
+            />
           </a>
         </div>
 

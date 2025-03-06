@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
-import { Camera, PenTool, TrendingUp, Share2, MonitorSmartphone, VideoIcon } from "lucide-react";
+import { Camera, PenTool, TrendingUp, Share2, VideoIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ServiceCardProps {
@@ -54,27 +54,9 @@ const ServicosSection: React.FC = () => {
 
   const services = [
     {
-      title: "Design Gráfico",
-      description: "Criamos identidades visuais e materiais gráficos que comunicam a essência da sua marca.",
-      icon: <PenTool size={24} />,
-      delay: "delay-100"
-    },
-    {
-      title: "Marketing Digital",
-      description: "Estratégias que aumentam sua presença online e geram resultados mensuráveis.",
-      icon: <TrendingUp size={24} />,
-      delay: "delay-200"
-    },
-    {
       title: "Gestão de Redes Sociais",
       description: "Cuidamos da sua presença digital com conteúdo engajador e estratégias de crescimento.",
       icon: <Share2 size={24} />,
-      delay: "delay-300"
-    },
-    {
-      title: "Web Design",
-      description: "Criamos sites responsivos e modernos que convertem visitantes em clientes.",
-      icon: <MonitorSmartphone size={24} />,
       delay: "delay-100"
     },
     {
@@ -118,7 +100,7 @@ const ServicosSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
