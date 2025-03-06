@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
-import { Camera, PenTool, TrendingUp, Share2, VideoIcon } from "lucide-react";
+import { Camera, Share2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ServiceCardProps {
@@ -19,7 +19,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, del
         delay
       )}
     >
-      <div className="bg-bity-600 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+      <div className="bg-black text-white p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
         {icon}
       </div>
       <h3 className="text-xl font-bold mb-3">{title}</h3>
@@ -60,12 +60,6 @@ const ServicosSection: React.FC = () => {
       delay: "delay-100"
     },
     {
-      title: "Produção Audiovisual",
-      description: "Vídeos e animações que contam sua história de forma cativante e memorável.",
-      icon: <VideoIcon size={24} />,
-      delay: "delay-200"
-    },
-    {
       title: "Fotografia Publicitária",
       description: "Imagens de alta qualidade que valorizam seus produtos e serviços.",
       icon: <Camera size={24} />,
@@ -82,12 +76,12 @@ const ServicosSection: React.FC = () => {
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent"></div>
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-bity-600/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-bity-600/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-black/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-black/5 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="mb-16 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-bity-100 text-bity-600 text-sm font-medium mb-6 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+          <span className="inline-block py-1 px-3 rounded-full bg-gray-200 text-black text-sm font-medium mb-6 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
             O que oferecemos
           </span>
           <h2 className="section-title text-center mx-auto animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
@@ -100,7 +94,7 @@ const ServicosSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto max-w-3xl">
           {services.map((service, index) => (
             <ServiceCard
               key={index}

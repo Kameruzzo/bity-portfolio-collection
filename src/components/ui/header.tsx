@@ -54,31 +54,31 @@ export function Header() {
         <nav className="hidden md:flex items-center space-x-8">
           <button
             onClick={() => scrollToSection("inicio")}
-            className="text-foreground hover:text-bity-600 transition-colors"
+            className="text-foreground hover:text-gray-600 transition-colors"
           >
             Início
           </button>
           <button
             onClick={() => scrollToSection("quem-somos")}
-            className="text-foreground hover:text-bity-600 transition-colors"
+            className="text-foreground hover:text-gray-600 transition-colors"
           >
             Quem Somos
           </button>
           <button
             onClick={() => scrollToSection("servicos")}
-            className="text-foreground hover:text-bity-600 transition-colors"
+            className="text-foreground hover:text-gray-600 transition-colors"
           >
             Serviços
           </button>
           <button
             onClick={() => scrollToSection("contato")}
-            className="text-foreground hover:text-bity-600 transition-colors"
+            className="text-foreground hover:text-gray-600 transition-colors"
           >
             Contato
           </button>
           <button
             onClick={() => scrollToSection("faq")}
-            className="text-foreground hover:text-bity-600 transition-colors"
+            className="text-foreground hover:text-gray-600 transition-colors"
           >
             FAQ
           </button>

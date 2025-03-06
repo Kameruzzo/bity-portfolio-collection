@@ -1,13 +1,12 @@
 
 import React, { useState } from "react";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import { toast } from "sonner";
 
 const ContatoSection: React.FC = () => {
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
-    telefone: "",
     mensagem: "",
   });
 
@@ -24,14 +23,16 @@ const ContatoSection: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulando envio do formulário
+    // Simulando envio do formulário para contato@500bity.com.br
+    console.log("Enviando email para: contato@500bity.com.br");
+    console.log("Dados do formulário:", formData);
+    
     setTimeout(() => {
       setIsSubmitting(false);
       toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
       setFormData({
         nome: "",
         email: "",
-        telefone: "",
         mensagem: "",
       });
     }, 1500);
@@ -45,7 +46,7 @@ const ContatoSection: React.FC = () => {
           backgroundImage: `url('/lovable-uploads/3e5a0c11-e335-46be-867c-ffaf2e16f327.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'brightness(0.15) saturate(1.2)'
+          filter: 'brightness(0.15) saturate(0)' // Changed to black and white
         }}
       ></div>
       
@@ -53,7 +54,7 @@ const ContatoSection: React.FC = () => {
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block py-1 px-3 rounded-full bg-bity-600/20 text-bity-200 text-sm font-medium mb-6 animate-slide-down">
+          <span className="inline-block py-1 px-3 rounded-full bg-gray-800/20 text-gray-200 text-sm font-medium mb-6 animate-slide-down">
             Fale Conosco
           </span>
           <h2 className="text-4xl font-bold text-white mb-6 animate-slide-up">Entre em Contato</h2>
@@ -67,39 +68,24 @@ const ContatoSection: React.FC = () => {
           <div className="lg:col-span-2 space-y-6">
             <div className="glass-card bg-white/10 backdrop-blur-md p-6 animate-slide-right">
               <div className="flex items-start">
-                <div className="bg-bity-600 p-3 rounded-full text-white mr-4">
+                <div className="bg-black p-3 rounded-full text-white mr-4">
                   <Mail size={20} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                   <p className="text-white/70">contato@500bity.com.br</p>
-                  <p className="text-white/70">comercial@500bity.com.br</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="glass-card bg-white/10 backdrop-blur-md p-6 animate-slide-right delay-100">
-              <div className="flex items-start">
-                <div className="bg-bity-600 p-3 rounded-full text-white mr-4">
-                  <Phone size={20} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Telefone</h3>
-                  <p className="text-white/70">+55 (11) 98765-4321</p>
-                  <p className="text-white/70">+55 (11) 3456-7890</p>
                 </div>
               </div>
             </div>
             
             <div className="glass-card bg-white/10 backdrop-blur-md p-6 animate-slide-right delay-200">
               <div className="flex items-start">
-                <div className="bg-bity-600 p-3 rounded-full text-white mr-4">
-                  <MapPin size={20} />
+                <div className="bg-black p-3 rounded-full text-white mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Endereço</h3>
-                  <p className="text-white/70">Av. Paulista, 1578</p>
-                  <p className="text-white/70">São Paulo - SP, Brasil</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Instagram</h3>
+                  <a href="https://instagram.com/500bity" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">@500bity</a>
                 </div>
               </div>
             </div>
@@ -122,7 +108,7 @@ const ContatoSection: React.FC = () => {
                     value={formData.nome}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white/20 border border-white/10 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-bity-600 transition-all"
+                    className="w-full bg-white/20 border border-white/10 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-white transition-all"
                     placeholder="Seu nome"
                   />
                 </div>
@@ -138,25 +124,10 @@ const ContatoSection: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white/20 border border-white/10 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-bity-600 transition-all"
+                    className="w-full bg-white/20 border border-white/10 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-white transition-all"
                     placeholder="seu.email@exemplo.com"
                   />
                 </div>
-              </div>
-              
-              <div>
-                <label className="block text-white/90 mb-2 text-sm" htmlFor="telefone">
-                  Telefone
-                </label>
-                <input
-                  type="tel"
-                  id="telefone"
-                  name="telefone"
-                  value={formData.telefone}
-                  onChange={handleChange}
-                  className="w-full bg-white/20 border border-white/10 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-bity-600 transition-all"
-                  placeholder="(00) 00000-0000"
-                />
               </div>
               
               <div>
@@ -170,7 +141,7 @@ const ContatoSection: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full bg-white/20 border border-white/10 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-bity-600 transition-all"
+                  className="w-full bg-white/20 border border-white/10 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-white transition-all"
                   placeholder="Como podemos ajudar?"
                 ></textarea>
               </div>

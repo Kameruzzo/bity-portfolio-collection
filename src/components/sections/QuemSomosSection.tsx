@@ -33,12 +33,12 @@ const QuemSomosSection: React.FC = () => {
       className="py-20 md:py-32 bg-white relative overflow-hidden"
     >
       {/* Background elements */}
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-radial from-bity-100 to-transparent opacity-50"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-radial from-bity-100 to-transparent opacity-50"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-radial from-gray-100 to-transparent opacity-50"></div>
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-radial from-gray-100 to-transparent opacity-50"></div>
       
       <div className="container mx-auto px-4 sm:px-6">
         <div className="mb-16 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-bity-100 text-bity-600 text-sm font-medium mb-6 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+          <span className="inline-block py-1 px-3 rounded-full bg-gray-200 text-black text-sm font-medium mb-6 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
             Nossa História
           </span>
           <h2 className="section-title text-center mx-auto animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
@@ -72,21 +72,21 @@ const QuemSomosSection: React.FC = () => {
               <h3 className="text-2xl font-bold mb-3">Nossos Valores</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
-                  <Award className="mr-3 h-6 w-6 text-bity-600 flex-shrink-0" />
+                  <Award className="mr-3 h-6 w-6 text-black flex-shrink-0" />
                   <div>
                     <h4 className="font-medium">Excelência</h4>
                     <p className="text-gray-600 text-sm">Buscamos a perfeição em cada projeto, superando expectativas.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Users className="mr-3 h-6 w-6 text-bity-600 flex-shrink-0" />
+                  <Users className="mr-3 h-6 w-6 text-black flex-shrink-0" />
                   <div>
                     <h4 className="font-medium">Colaboração</h4>
                     <p className="text-gray-600 text-sm">Trabalhamos juntos, valorizando cada perspectiva única.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Zap className="mr-3 h-6 w-6 text-bity-600 flex-shrink-0" />
+                  <Zap className="mr-3 h-6 w-6 text-black flex-shrink-0" />
                   <div>
                     <h4 className="font-medium">Inovação</h4>
                     <p className="text-gray-600 text-sm">Desafiamos o convencional, buscando soluções criativas.</p>
@@ -99,10 +99,10 @@ const QuemSomosSection: React.FC = () => {
           {/* Right column - Image */}
           <div className="relative animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300">
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-r from-bity-600/20 to-transparent z-10 rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent z-10 rounded-2xl"></div>
               <img 
-                src="/lovable-uploads/fd0dc4d4-7335-42f4-a7de-c32556df9b42.png" 
-                alt="Equipe 500BITY" 
+                src="/lovable-uploads/04b76cee-bfc1-44ac-88a2-3a3809774071.png" 
+                alt="Nossos Valores" 
                 className="w-full h-full object-cover object-center rounded-2xl transition-transform duration-700 hover:scale-105"
               />
             </div>

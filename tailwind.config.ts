@@ -19,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['DM Sans', 'sans-serif'],
+				header: ['Playfair Display', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -60,11 +64,11 @@ export default {
 					200: '#dee2e6',
 					300: '#ced4da',
 					400: '#adb5bd',
-					500: '#6E59A5',
-					600: '#8B5CF6',
-					700: '#6c44fc',
-					800: '#5a37d7',
-					900: '#4a25c5'
+					500: '#6c757d',
+					600: '#000000',
+					700: '#000000',
+					800: '#000000',
+					900: '#000000'
 				}
 			},
 			borderRadius: {
