@@ -4,9 +4,9 @@ import { Instagram, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white py-16">
+    <footer className="bg-black text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-8">
           <div className="space-y-4">
             <div className="h-8">
               <img 
@@ -23,14 +23,14 @@ export function Footer() {
                 href="https://instagram.com/500bity" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-white hover:text-gray-400 transition-colors" 
+                className="text-white hover:text-bity-600 transition-colors" 
                 aria-label="Instagram"
               >
                 <Instagram size={24} />
               </a>
               <a 
                 href="mailto:contato@500bity.com.br" 
-                className="text-white hover:text-gray-400 transition-colors" 
+                className="text-white hover:text-bity-600 transition-colors" 
                 aria-label="Email"
               >
                 <Mail size={24} />
@@ -60,7 +60,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400">
+        <div className="border-t border-gray-800 pt-6 text-center text-gray-400">
           <p>© 2025 500BITY. Todos os direitos reservados.</p>
         </div>
       </div>

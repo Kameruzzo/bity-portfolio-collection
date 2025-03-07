@@ -26,6 +26,13 @@ const HeroSection: React.FC = () => {
     }
   };
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <section
       id="inicio"
@@ -35,8 +42,8 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-black via-bity-900 to-black opacity-90"></div>
       
       {/* Animated shapes */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-bity-600/20 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-bity-700/20 rounded-full blur-3xl animate-float delay-300"></div>
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-bity-600/30 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-bity-700/30 rounded-full blur-3xl animate-float delay-300"></div>
       
       {/* Content */}
       <div
@@ -44,7 +51,7 @@ const HeroSection: React.FC = () => {
         className="container relative z-10 px-4 sm:px-6 text-center"
       >
         <div className="animate-slide-down">
-          <span className="inline-block py-1 px-3 rounded-full bg-bity-600/20 text-bity-600 text-sm font-medium mb-6">
+          <span className="inline-block py-1 px-3 rounded-full bg-bity-600/20 text-white text-sm font-medium mb-6">
             Agência de Publicidade
           </span>
         </div>
@@ -56,19 +63,25 @@ const HeroSection: React.FC = () => {
           </span>
         </h1>
         
-        <h2 className="text-xl md:text-3xl lg:text-4xl text-white/90 font-light mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up delay-100">
+        <h2 className="text-xl md:text-3xl lg:text-4xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up delay-100">
           Aqui, publicidade é mais que um hobby
         </h2>
         
-        <p className="text-white/70 max-w-xl mx-auto mb-12 animate-slide-up delay-200">
+        <p className="text-white/80 max-w-xl mx-auto mb-12 animate-slide-up delay-200">
           Transformamos ideias em campanhas que capturam a essência da sua marca e conectam com seu público de forma autêntica e impactante.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up delay-300">
-          <button className="btn-primary">
+          <button 
+            className="btn-primary"
+            onClick={() => scrollToSection('servicos')}
+          >
             Nossos Serviços
           </button>
-          <button className="btn-secondary">
+          <button 
+            className="btn-secondary"
+            onClick={() => scrollToSection('contato')}
+          >
             Entre em Contato
           </button>
         </div>

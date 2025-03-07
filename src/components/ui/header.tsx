@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -34,8 +35,8 @@ export function Header() {
       className={cn(
         "fixed w-full top-0 z-50 transition-all duration-300",
         scrolled
-          ? "py-4 bg-white/90 backdrop-blur-md shadow-md"
-          : "py-6 bg-black/10 backdrop-blur-sm"
+          ? "py-4 bg-black/90 backdrop-blur-md shadow-md"
+          : "py-6 bg-black/50 backdrop-blur-sm"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
@@ -54,12 +55,7 @@ export function Header() {
             <button
               key={section}
               onClick={() => scrollToSection(section)}
-              className={cn(
-                "transition-colors",
-                scrolled
-                  ? "text-gray-800 hover:text-black"
-                  : "text-white hover:text-gray-200"
-              )}
+              className="text-white hover:text-bity-600 transition-colors font-medium"
             >
               {section.charAt(0).toUpperCase() + section.slice(1).replace("-", " ")}
             </button>
@@ -67,10 +63,7 @@ export function Header() {
         </nav>
 
         <button
-          className={cn(
-            "md:hidden",
-            scrolled ? "text-gray-800" : "text-white"
-          )}
+          className="text-white md:hidden"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
@@ -80,7 +73,7 @@ export function Header() {
 
       <div
         className={cn(
-          "fixed inset-0 bg-white pt-20 px-6 md:hidden transition-all duration-300 ease-in-out z-40",
+          "fixed inset-0 bg-black pt-20 px-6 md:hidden transition-all duration-300 ease-in-out z-40",
           isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
         )}
       >
@@ -89,7 +82,7 @@ export function Header() {
             <button
               key={section}
               onClick={() => scrollToSection(section)}
-              className="text-lg font-medium py-2 border-b border-gray-100 text-gray-800 hover:text-black transition-colors"
+              className="text-lg font-medium py-2 border-b border-gray-800 text-white hover:text-bity-600 transition-colors text-left"
             >
               {section.charAt(0).toUpperCase() + section.slice(1).replace("-", " ")}
             </button>
