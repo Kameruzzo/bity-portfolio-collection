@@ -35,15 +35,17 @@ export function Header() {
       className={cn(
         "fixed w-full top-0 z-50 transition-all duration-300",
         scrolled
-          ? "py-4 bg-black/90 backdrop-blur-md shadow-md"
-          : "py-6 bg-black/50 backdrop-blur-sm"
+          ? "py-4 bg-gray-200/40 backdrop-blur-md shadow-md"
+          : "py-6 bg-gray-500/10 backdrop-blur-sm"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center">
           <a href="#inicio" className="h-10">
             <img 
-              src="/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
+              src={scrolled 
+                ? "/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
+                : "/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png"} 
               alt="500BITY" 
               className="h-full"
             />
@@ -55,7 +57,10 @@ export function Header() {
             <button
               key={section}
               onClick={() => scrollToSection(section)}
-              className="text-white hover:text-bity-600 transition-colors font-medium"
+              className={cn(
+                "transition-colors font-medium",
+                scrolled ? "text-black hover:text-bity-600" : "text-white hover:text-bity-600"
+              )}
             >
               {section.charAt(0).toUpperCase() + section.slice(1).replace("-", " ")}
             </button>
@@ -63,7 +68,7 @@ export function Header() {
         </nav>
 
         <button
-          className="text-white md:hidden"
+          className={cn("md:hidden", scrolled ? "text-black" : "text-white")}
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >

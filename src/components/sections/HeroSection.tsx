@@ -56,13 +56,6 @@ const HeroSection: React.FC = () => {
           </span>
         </div>
         
-        <h1 className="hero-text text-4xl md:text-6xl lg:text-7xl text-white mb-6 animate-slide-up">
-          <span className="block">
-            <span className="text-white">500</span>
-            <span className="text-bity-600">BITY</span>
-          </span>
-        </h1>
-        
         <h2 className="text-xl md:text-3xl lg:text-4xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up delay-100">
           Aqui, publicidade é mais que um hobby
         </h2>
