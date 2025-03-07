@@ -38,12 +38,15 @@ const HeroSection: React.FC = () => {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24"
     >
-      {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-bity-900 to-black opacity-90"></div>
-      
-      {/* Animated shapes */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-bity-600/30 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-bity-700/30 rounded-full blur-3xl animate-float delay-300"></div>
+      {/* Full-screen planet background image */}
+      <div className="absolute inset-0 w-full h-full">
+        <img 
+          src="/lovable-uploads/8776cf01-1ffe-49a6-b964-97b26d4d1538.png" 
+          alt="Purple planet" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30"></div> {/* Optional overlay for better text readability */}
+      </div>
       
       {/* Content */}
       <div

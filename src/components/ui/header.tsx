@@ -36,11 +36,13 @@ export function Header() {
         "fixed w-full top-0 z-50 transition-all duration-300",
         scrolled
           ? "py-4 bg-gray-200/40 backdrop-blur-md shadow-md"
-          : "py-6 bg-gray-500/10 backdrop-blur-sm"
+          : "py-6 bg-transparent"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <div className="flex items-center">
+        <div className="flex-1"></div> {/* Spacer for centering logo */}
+        
+        <div className="flex items-center justify-center flex-1">
           <a href="#inicio" className="h-10">
             <img 
               src={scrolled 
@@ -52,28 +54,30 @@ export function Header() {
           </a>
         </div>
 
-        <nav className="hidden md:flex items-center space-x-8">
-          {["inicio", "quem-somos", "servicos", "contato", "faq"].map((section) => (
-            <button
-              key={section}
-              onClick={() => scrollToSection(section)}
-              className={cn(
-                "transition-colors font-medium",
-                scrolled ? "text-black hover:text-bity-600" : "text-white hover:text-bity-600"
-              )}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1).replace("-", " ")}
-            </button>
-          ))}
-        </nav>
+        <div className="flex-1 flex justify-end">
+          <nav className="hidden md:flex items-center space-x-8">
+            {["inicio", "quem-somos", "servicos", "contato", "faq"].map((section) => (
+              <button
+                key={section}
+                onClick={() => scrollToSection(section)}
+                className={cn(
+                  "transition-colors font-medium",
+                  scrolled ? "text-black hover:text-bity-600" : "text-white hover:text-bity-600"
+                )}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1).replace("-", " ")}
+              </button>
+            ))}
+          </nav>
 
-        <button
-          className={cn("md:hidden", scrolled ? "text-black" : "text-white")}
-          onClick={toggleMenu}
-          aria-label="Toggle Menu"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          <button
+            className={cn("md:hidden", scrolled ? "text-black" : "text-white")}
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       <div
