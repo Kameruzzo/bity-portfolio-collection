@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Instagram } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -27,6 +27,13 @@ export function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram size={24} />
+              </a>
+              <a 
+                href="mailto:contato@500bity.com.br" 
+                className="text-white hover:text-gray-400 transition-colors" 
+                aria-label="Email"
+              >
+                <Mail size={24} />
               </a>
             </div>
           </div>

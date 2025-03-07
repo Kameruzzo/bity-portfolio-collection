@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Mail, Send } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContatoSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -19,23 +20,45 @@ const ContatoSection: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulando envio do formulário para contato@500bity.com.br
-    console.log("Enviando email para: contato@500bity.com.br");
-    console.log("Dados do formulário:", formData);
-    
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // First save to Supabase
+      const { error: dbError } = await supabase
+        .from("contact_submissions")
+        .insert({ 
+          nome: formData.nome, 
+          email: formData.email, 
+          mensagem: formData.mensagem 
+        });
+      
+      if (dbError) throw new Error("Erro ao salvar mensagem: " + dbError.message);
+      
+      // Then call our Edge Function to send emails
+      const { error: fnError } = await supabase.functions.invoke("contact-form", {
+        body: formData
+      });
+      
+      if (fnError) throw new Error("Erro ao enviar email: " + fnError.message);
+      
       toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
       setFormData({
         nome: "",
         email: "",
         mensagem: "",
       });
-    }, 1500);
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+      toast.error("Erro ao enviar mensagem. Por favor, tente novamente.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleMailClick = () => {
+    window.open("mailto:contato@500bity.com.br", "_blank");
   };
 
   return (
@@ -68,12 +91,20 @@ const ContatoSection: React.FC = () => {
           <div className="lg:col-span-2 space-y-6">
             <div className="glass-card bg-white/10 backdrop-blur-md p-6 animate-slide-right">
               <div className="flex items-start">
-                <div className="bg-black p-3 rounded-full text-white mr-4">
+                <div 
+                  className="bg-black p-3 rounded-full text-white mr-4 cursor-pointer"
+                  onClick={handleMailClick}
+                >
                   <Mail size={20} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-                  <p className="text-white/70">contato@500bity.com.br</p>
+                  <a 
+                    href="mailto:contato@500bity.com.br" 
+                    className="text-white/70 hover:text-white transition-colors"
+                  >
+                    contato@500bity.com.br
+                  </a>
                 </div>
               </div>
             </div>
