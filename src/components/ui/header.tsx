@@ -5,14 +5,19 @@ import { Menu, X } from "lucide-react";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      // Calculate scroll progress (0 to 1) for the first 100px
+      const progress = Math.min(1, window.scrollY / 100);
+      setScrollProgress(progress);
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Use passive listener for better performance
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -42,14 +47,24 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex-1"></div> {/* Spacer for centering logo */}
         
-        <div className="flex items-center justify-center flex-1">
-          <a href="#inicio" className="h-10">
+        <div className="flex items-center justify-center flex-1 relative h-10">
+          {/* White logo (fades out on scroll) */}
+          <a href="#inicio" className="h-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300" 
+            style={{ opacity: 1 - scrollProgress }}>
             <img 
-              src={scrolled 
-                ? "/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
-                : "/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png"} 
+              src="/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
               alt="500BITY" 
               className="h-full"
+            />
+          </a>
+          
+          {/* Black logo (fades in on scroll) */}
+          <a href="#inicio" className="h-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300" 
+            style={{ opacity: scrollProgress }}>
+            <img 
+              src="/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
+              alt="500BITY" 
+              className="h-full brightness-0"
             />
           </a>
         </div>

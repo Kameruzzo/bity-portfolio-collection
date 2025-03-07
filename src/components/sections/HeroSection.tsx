@@ -1,23 +1,26 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
 
 const HeroSection: React.FC = () => {
+  const [scrollY, setScrollY] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
-      const heroContent = document.getElementById("hero-content");
-      const scrollPosition = window.scrollY;
-      
-      if (heroContent) {
-        // Parallax effect
-        heroContent.style.transform = `translateY(${scrollPosition * 0.2}px)`;
-        heroContent.style.opacity = `${1 - scrollPosition * 0.002}`;
-      }
+      // Get scroll position but throttle it
+      requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const heroContentStyle = {
+    transform: `translateY(${scrollY * 0.2}px)`,
+    opacity: Math.max(0, 1 - scrollY * 0.002)
+  };
 
   const scrollToNext = () => {
     const quemSomosSection = document.getElementById("quem-somos");
@@ -52,6 +55,7 @@ const HeroSection: React.FC = () => {
       <div
         id="hero-content" 
         className="container relative z-10 px-4 sm:px-6 text-center"
+        style={heroContentStyle}
       >
         <div className="animate-slide-down">
           <span className="inline-block py-1 px-3 rounded-full bg-bity-600/20 text-white text-sm font-medium mb-6">
