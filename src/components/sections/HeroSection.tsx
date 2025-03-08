@@ -57,21 +57,21 @@ const HeroSection: React.FC = () => {
         className="container relative z-10 px-4 sm:px-6 text-center"
         style={heroContentStyle}
       >
-        <div className="animate-slide-down">
+        <div>
           <span className="inline-block py-1 px-3 rounded-full bg-bity-600/20 text-white text-sm font-medium mb-6">
             Agência de Publicidade
           </span>
         </div>
         
-        <h2 className="text-xl md:text-3xl lg:text-4xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up delay-100">
+        <h2 className="text-xl md:text-3xl lg:text-4xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed">
           Aqui, publicidade é mais que um hobby
         </h2>
         
-        <p className="text-white/80 max-w-xl mx-auto mb-12 animate-slide-up delay-200">
+        <p className="text-white/80 max-w-xl mx-auto mb-12">
           Transformamos ideias em campanhas que capturam a essência da sua marca e conectam com seu público de forma autêntica e impactante.
         </p>
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up delay-300">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button 
             className="btn-primary"
             onClick={() => scrollToSection('servicos')}
@@ -96,6 +96,6 @@ const HeroSection: React.FC = () => {
       </div>
     </section>
   );
-};
+}
 
 export default HeroSection;

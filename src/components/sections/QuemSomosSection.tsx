@@ -96,9 +96,9 @@ const QuemSomosSection: React.FC = () => {
             </div>
           </div>
           
-          {/* Right column - Image */}
+          {/* Right column - Image - Removed shadow-xl class */}
           <div className="relative animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300">
-            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+            <div className="relative overflow-hidden rounded-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent z-10 rounded-2xl"></div>
               <img 
                 src="/lovable-uploads/04b76cee-bfc1-44ac-88a2-3a3809774071.png" 
