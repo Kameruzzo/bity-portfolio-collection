@@ -55,8 +55,8 @@ serve(async (req) => {
       );
     }
 
-    // Initialize Resend
-    const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+    // Initialize Resend with the updated API key
+    const resend = new Resend("re_CtFf1kBi_A1FaXJcdZLm5jByvC6tQ48Yx");
 
     // Send email to company
     const companyEmailResponse = await resend.emails.send({
