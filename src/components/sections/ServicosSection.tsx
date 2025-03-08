@@ -105,17 +105,6 @@ const ServicosSection: React.FC = () => {
             />
           ))}
         </div>
-
-        {/* CTA */}
-        <div className="mt-16 text-center animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-400">
-          <h3 className="text-2xl font-bold mb-4">Pronto para transformar sua marca?</h3>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-            Assine nossos serviços e leve sua marca para o próximo nível com estratégias personalizadas e resultados reais.
-          </p>
-          <button className="btn-primary">
-            Assinar nossos serviços
-          </button>
-        </div>
       </div>
     </section>
   );
