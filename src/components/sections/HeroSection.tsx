@@ -41,14 +41,14 @@ const HeroSection: React.FC = () => {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24"
     >
-      {/* Full-screen planet background image */}
+      {/* Full-screen background image */}
       <div className="absolute inset-0 w-full h-full">
         <img 
-          src="/lovable-uploads/8776cf01-1ffe-49a6-b964-97b26d4d1538.png" 
-          alt="Purple planet" 
+          src="/lovable-uploads/1be9282b-0d6c-4883-a885-7a584d31083e.png" 
+          alt="Blue backdrop with figure" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30"></div> {/* Optional overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/20"></div> {/* Optional overlay for better text readability */}
       </div>
       
       {/* Content */}

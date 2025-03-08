@@ -5,14 +5,10 @@ import { Menu, X } from "lucide-react";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Calculate scroll progress (0 to 1) for the first 100px
-      const progress = Math.min(1, window.scrollY / 100);
-      setScrollProgress(progress);
       setScrolled(window.scrollY > 20);
     };
 
@@ -40,7 +36,7 @@ export function Header() {
       className={cn(
         "fixed w-full top-0 z-50 transition-all duration-300",
         scrolled
-          ? "py-4 bg-gray-200/40 backdrop-blur-md shadow-md"
+          ? "py-4 bg-gray-200/90 backdrop-blur-md shadow-md"
           : "py-6 bg-transparent"
       )}
     >
@@ -48,9 +44,9 @@ export function Header() {
         <div className="flex-1"></div> {/* Spacer for centering logo */}
         
         <div className="flex items-center justify-center flex-1 relative h-10">
-          {/* White logo (fades out on scroll) */}
-          <a href="#inicio" className="h-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300" 
-            style={{ opacity: 1 - scrollProgress }}>
+          {/* White logo (visible when not scrolled) */}
+          <a href="#inicio" className={cn("h-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300", 
+            scrolled ? "opacity-0" : "opacity-100")}>
             <img 
               src="/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
               alt="500BITY" 
@@ -58,9 +54,9 @@ export function Header() {
             />
           </a>
           
-          {/* Black logo (fades in on scroll) */}
-          <a href="#inicio" className="h-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300" 
-            style={{ opacity: scrollProgress }}>
+          {/* Black logo (visible when scrolled) */}
+          <a href="#inicio" className={cn("h-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300", 
+            scrolled ? "opacity-100" : "opacity-0")}>
             <img 
               src="/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
               alt="500BITY" 

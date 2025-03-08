@@ -101,12 +101,12 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 lg:mb-10 relative inline-block;
+    @apply text-3xl md:text-4xl font-bold mb-6 lg:mb-10 relative;
   }
 
   .section-title::after {
     content: "";
-    @apply absolute -bottom-2 left-0 w-1/2 h-1 bg-black rounded-full;
+    @apply absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-black rounded-full;
   }
   
   .glass-card {

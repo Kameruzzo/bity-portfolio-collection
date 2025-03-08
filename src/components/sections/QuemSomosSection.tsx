@@ -41,8 +41,8 @@ const QuemSomosSection: React.FC = () => {
           <span className="inline-block py-1 px-3 rounded-full bg-gray-200 text-black text-sm font-medium mb-6 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
             Nossa História
           </span>
-          <h2 className="section-title text-center mx-auto animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            Quem Somos
+          <h2 className="text-center mx-auto animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <span className="section-title inline-block">Quem Somos</span>
           </h2>
           <div className="max-w-2xl mx-auto">
             <p className="text-gray-600 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">

@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Mail, Send } from "lucide-react";
+import { Mail, Send, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -189,6 +189,17 @@ const ContatoSection: React.FC = () => {
                 )}
                 {isSubmitting ? "Enviando..." : "Enviar mensagem"}
               </button>
+              
+              <div className="mt-4 pt-4 border-t border-white/10 text-white/60 text-sm text-center">
+                Prefere outro método? <a 
+                  href="https://forms.zohopublic.com/contato5001/form/GuiadeColaborao/formperma/nSiACkp26_U_c3xsakPMsZoOMv5XgHLgkTDa_m5jQPU" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-white/80 inline-flex items-center"
+                >
+                  Acesse nosso formulário alternativo <ExternalLink className="ml-1 h-3 w-3" />
+                </a>
+              </div>
             </form>
           </div>
         </div>
