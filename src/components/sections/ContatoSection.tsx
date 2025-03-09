@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Mail, Send, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
@@ -58,7 +57,7 @@ const ContatoSection: React.FC = () => {
   };
 
   const handleMailClick = () => {
-    window.open("mailto:contato@500bity.com.br", "_blank");
+    window.open("mailto:500bity.chat@gmail.com", "_blank");
   };
 
   return (
@@ -69,7 +68,7 @@ const ContatoSection: React.FC = () => {
           backgroundImage: `url('/lovable-uploads/3e5a0c11-e335-46be-867c-ffaf2e16f327.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'brightness(0.15) saturate(0)' // Changed to black and white
+          filter: 'brightness(0.15) saturate(0)'
         }}
       ></div>
       
@@ -100,10 +99,10 @@ const ContatoSection: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                   <a 
-                    href="mailto:contato@500bity.com.br" 
+                    href="mailto:500bity.chat@gmail.com" 
                     className="text-white/70 hover:text-white transition-colors"
                   >
-                    contato@500bity.com.br
+                    500bity.chat@gmail.com
                   </a>
                 </div>
               </div>

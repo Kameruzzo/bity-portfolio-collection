@@ -55,13 +55,13 @@ serve(async (req) => {
       );
     }
 
-    // Initialize Resend with the updated API key
+    // Initialize Resend with the API key
     const resend = new Resend("re_CtFf1kBi_A1FaXJcdZLm5jByvC6tQ48Yx");
 
-    // Send email to company
+    // Send email to company - Updated with the new email address
     const companyEmailResponse = await resend.emails.send({
       from: "500BITY <onboarding@resend.dev>",
-      to: "contato@500bity.com.br",
+      to: "500bity.chat@gmail.com", // Updated email address
       subject: `Novo contato de ${nome}`,
       html: `
         <h1>Novo contato recebido</h1>
