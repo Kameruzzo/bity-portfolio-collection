@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
 
@@ -87,12 +86,12 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
       
-      {/* Scroll indicator - Positioned exactly in the middle */}
+      {/* Scroll indicator - Perfectly centered on all devices */}
       <div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce cursor-pointer flex justify-center w-full"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce cursor-pointer text-center"
         onClick={scrollToNext}
       >
-        <ArrowDown className="text-white h-8 w-8" />
+        <ArrowDown className="text-white h-8 w-8 mx-auto" />
       </div>
     </section>
   );
