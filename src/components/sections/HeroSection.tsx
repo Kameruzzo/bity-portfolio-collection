@@ -87,9 +87,9 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
       
-      {/* Scroll indicator */}
+      {/* Scroll indicator - Positioned exactly in the middle */}
       <div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce cursor-pointer"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce cursor-pointer flex justify-center w-full"
         onClick={scrollToNext}
       >
         <ArrowDown className="text-white h-8 w-8" />
