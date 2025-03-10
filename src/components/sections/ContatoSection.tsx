@@ -25,21 +25,45 @@ const ContatoSection: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Send form data to Apidog API
-      const response = await fetch("https://jvv78o77xu.apidog.io/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData)
-      });
-      
-      const data = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(data.error || "Ocorreu um erro ao enviar sua mensagem");
+      // Try sending to Apidog API first
+      try {
+        const response = await fetch("https://jvv78o77xu.apidog.io/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData)
+        });
+        
+        if (!response.ok) {
+          throw new Error("API response was not ok");
+        }
+        
+        const data = await response.json();
+        console.log("Form submission successful:", data);
+        
+        toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+        setFormData({
+          nome: "",
+          email: "",
+          mensagem: "",
+        });
+        return; // Exit early if successful
+      } catch (apiError) {
+        console.error("Error with Apidog API, falling back to Supabase:", apiError);
+        // Fall through to Supabase if API fails
       }
       
+      // Fallback to Supabase Edge Function
+      const { data, error } = await supabase.functions.invoke("contact-form", {
+        body: formData
+      });
+      
+      if (error) {
+        throw new Error(error.message);
+      }
+      
+      console.log("Form submitted via Supabase fallback:", data);
       toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
       setFormData({
         nome: "",
