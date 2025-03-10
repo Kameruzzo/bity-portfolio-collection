@@ -47,7 +47,7 @@ serve(async (req) => {
     if (dbError) {
       console.error("Database error:", dbError);
       return new Response(
-        JSON.stringify({ error: "Erro ao salvar mensagem" }),
+        JSON.stringify({ error: "Erro ao salvar mensagem", details: dbError }),
         { 
           status: 500, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
@@ -56,12 +56,12 @@ serve(async (req) => {
     }
 
     // Initialize Resend with the API key
-    const resend = new Resend("re_CtFf1kBi_A1FaXJcdZLm5jByvC6tQ48Yx");
+    const resend = new Resend(Deno.env.get("RESEND_API_KEY") || "");
 
-    // Send email to company - Updated with the new email address
+    // Send email to company
     const companyEmailResponse = await resend.emails.send({
       from: "500BITY <onboarding@resend.dev>",
-      to: "500bity.chat@gmail.com", // Updated email address
+      to: "500bity.chat@gmail.com", 
       subject: `Novo contato de ${nome}`,
       html: `
         <h1>Novo contato recebido</h1>

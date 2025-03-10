@@ -24,23 +24,12 @@ const ContatoSection: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // First save to Supabase
-      const { error: dbError } = await supabase
-        .from("contact_submissions")
-        .insert({ 
-          nome: formData.nome, 
-          email: formData.email, 
-          mensagem: formData.mensagem 
-        });
-      
-      if (dbError) throw new Error("Erro ao salvar mensagem: " + dbError.message);
-      
-      // Then call our Edge Function to send emails
-      const { error: fnError } = await supabase.functions.invoke("contact-form", {
+      // Call our Edge Function to handle form submission and email sending
+      const { data, error } = await supabase.functions.invoke("contact-form", {
         body: formData
       });
       
-      if (fnError) throw new Error("Erro ao enviar email: " + fnError.message);
+      if (error) throw new Error(error.message);
       
       toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
       setFormData({
