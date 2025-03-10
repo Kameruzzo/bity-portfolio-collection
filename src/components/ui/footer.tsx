@@ -8,11 +8,11 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-8">
           <div className="space-y-4">
-            <div className="h-8">
+            <div className="h-10">
               <img 
-                src="/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
+                src="/lovable-uploads/fd0dc4d4-7335-42f4-a7de-c32556df9b42.png" 
                 alt="500BITY" 
-                className="h-full"
+                className="h-full object-contain"
               />
             </div>
             <p className="text-gray-300 max-w-xs">
