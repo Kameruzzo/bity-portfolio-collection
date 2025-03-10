@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Mail, Send, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
@@ -24,12 +25,20 @@ const ContatoSection: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Call our Edge Function to handle form submission and email sending
-      const { data, error } = await supabase.functions.invoke("contact-form", {
-        body: formData
+      // Send form data to Apidog API
+      const response = await fetch("https://jvv78o77xu.apidog.io/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData)
       });
       
-      if (error) throw new Error(error.message);
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || "Ocorreu um erro ao enviar sua mensagem");
+      }
       
       toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
       setFormData({
