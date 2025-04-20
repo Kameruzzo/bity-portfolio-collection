@@ -60,8 +60,8 @@ const ServicosSection: React.FC = () => {
       delay: "delay-100"
     },
     {
-      title: "Fotografia Publicitária",
-      description: "Imagens de alta qualidade que valorizam seus produtos e serviços.",
+      title: "Conteúdo Publicitário",
+      description: "Criamos conteúdo promovido dentro do alcance de nossas páginas, garantindo visibilidade estratégica para sua marca.",
       icon: <Camera size={24} />,
       delay: "delay-300"
     }
