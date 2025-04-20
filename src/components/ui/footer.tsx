@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Instagram, Mail } from "lucide-react";
 
 export function Footer() {
+  const [clickedButtons, setClickedButtons] = useState({
+    instagram: false,
+    email: false
+  });
+
+  const handleButtonClick = (platform: 'instagram' | 'email') => {
+    setClickedButtons(prev => ({
+      ...prev,
+      [platform]: true
+    }));
+  };
+
   return (
     <footer className="bg-black text-white py-12">
       <div className="container mx-auto px-4">
@@ -22,15 +34,17 @@ export function Footer() {
                 href="https://instagram.com/500bity" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-white hover:text-bity-600 transition-colors" 
+                className={`text-white hover:text-bity-600 transition-colors ${clickedButtons.instagram ? 'text-gray-500' : ''}`} 
                 aria-label="Instagram"
+                onClick={() => handleButtonClick('instagram')}
               >
                 <Instagram size={24} />
               </a>
               <a 
                 href="mailto:contato@500bity.com.br" 
-                className="text-white hover:text-bity-600 transition-colors" 
+                className={`text-white hover:text-bity-600 transition-colors ${clickedButtons.email ? 'text-gray-500' : ''}`} 
                 aria-label="Email"
+                onClick={() => handleButtonClick('email')}
               >
                 <Mail size={24} />
               </a>
