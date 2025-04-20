@@ -5,7 +5,7 @@ import ContactCard from "./ContactCard";
 
 const ContactInfo: React.FC = () => {
   const handleMailClick = () => {
-    window.open("mailto:500bity.chat@gmail.com", "_blank");
+    window.open("mailto:contato@500bity.com.br", "_blank");
   };
 
   return (
@@ -15,10 +15,10 @@ const ContactInfo: React.FC = () => {
         title="Email"
         content={
           <a 
-            href="mailto:500bity.chat@gmail.com" 
+            href="mailto:contato@500bity.com.br" 
             className="text-white/70 hover:text-white transition-colors"
           >
-            500bity.chat@gmail.com
+            contato@500bity.com.br
           </a>
         }
         onClick={handleMailClick}
