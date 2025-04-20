@@ -96,13 +96,13 @@ const QuemSomosSection: React.FC = () => {
             </div>
           </div>
           
-          {/* Right column - Image - Removed gradient overlay */}
+          {/* Right column - Image */}
           <div className="relative animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300">
-            <div className="relative overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden">
               <img 
                 src="/lovable-uploads/04b76cee-bfc1-44ac-88a2-3a3809774071.png" 
                 alt="Nossos Valores" 
-                className="w-full h-full object-cover object-center rounded-2xl transition-transform duration-700 hover:scale-105"
+                className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
               />
             </div>
           </div>
