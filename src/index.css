@@ -19,7 +19,7 @@
     --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 16 100% 50%;
+    --secondary: 0 0% 0%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 96.1%;
@@ -60,7 +60,7 @@
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 16 100% 50%;
+    --secondary: 0 0% 0%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
@@ -106,7 +106,7 @@
 
   .section-title::after {
     content: "";
-    @apply absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#FF5722] rounded-full;
+    @apply absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-black rounded-full;
   }
   
   .glass-card {
@@ -118,7 +118,7 @@
   }
   
   .btn-secondary {
-    @apply px-6 py-3 bg-transparent border border-[#FF5722] text-[#FF5722] font-medium rounded-full transition-all duration-300 hover:bg-[#FF5722]/10 focus:outline-none focus:ring-2 focus:ring-[#FF5722] focus:ring-offset-2;
+    @apply px-6 py-3 bg-transparent border border-black text-black font-medium rounded-full transition-all duration-300 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2;
   }
 }
 

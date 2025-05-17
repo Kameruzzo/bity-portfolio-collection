@@ -57,8 +57,8 @@ const HeroSection: React.FC = () => {
         className="container relative z-10 px-4 sm:px-6 text-center"
         style={heroContentStyle}
       >
-        <h2 className="text-xl md:text-3xl lg:text-4xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed">
-          Aqui, publicidade é mais que um hobby
+        <h2 className="text-2xl md:text-4xl lg:text-5xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed">
+          O Jeito Sul-Americano de Fazer Publicidade
         </h2>
         
         <p className="text-white/80 max-w-xl mx-auto mb-12">

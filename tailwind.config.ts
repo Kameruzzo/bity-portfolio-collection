@@ -58,17 +58,17 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				bity: {
-					DEFAULT: '#FF5722',
+					DEFAULT: '#000000',
 					50: '#f8f9fa',
 					100: '#e9ecef',
 					200: '#dee2e6',
 					300: '#ced4da',
 					400: '#adb5bd',
 					500: '#6c757d',
-					600: '#FF5722',
-					700: '#e64a19',
-					800: '#d84315',
-					900: '#bf360c'
+					600: '#000000',
+					700: '#000000',
+					800: '#000000',
+					900: '#000000'
 				}
 			},
 			borderRadius: {
