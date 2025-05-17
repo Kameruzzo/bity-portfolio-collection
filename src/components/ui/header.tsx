@@ -33,6 +33,11 @@ export function Header() {
           ? "py-4 bg-gray-200/90 backdrop-blur-md shadow-md"
           : "py-6 bg-transparent"
       )}
+      style={{
+        backgroundImage: scrolled ? "none" : "url('/lovable-uploads/6056f6ba-906b-4d06-8994-cef1a03f35e2.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex-1"></div> {/* Spacer for centering logo */}
