@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 w-full h-full">
         <img 
           src="/lovable-uploads/98001d01-b5f7-4eb0-90df-913a0d3e4ff6.png" 
-          alt="Orange digital background with South America fingerprint" 
+          alt="Digital background" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/20"></div> {/* Optional overlay for better text readability */}
@@ -57,12 +57,6 @@ const HeroSection: React.FC = () => {
         className="container relative z-10 px-4 sm:px-6 text-center"
         style={heroContentStyle}
       >
-        <div>
-          <span className="inline-block py-1 px-3 rounded-full bg-bity-600/20 text-white text-sm font-medium mb-6">
-            Agência de Publicidade
-          </span>
-        </div>
-        
         <h2 className="text-xl md:text-3xl lg:text-4xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed">
           Aqui, publicidade é mais que um hobby
         </h2>
