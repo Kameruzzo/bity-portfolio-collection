@@ -42,7 +42,7 @@ export function Header() {
           <a href="#inicio" className={cn("h-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300", 
             scrolled ? "opacity-0" : "opacity-100")}>
             <img 
-              src="/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
+              src="/lovable-uploads/9040b7ae-4b7c-44cf-baf4-9d8d558470a0.png" 
               alt="500BITY" 
               className="h-full"
             />
@@ -52,7 +52,7 @@ export function Header() {
           <a href="#inicio" className={cn("h-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300", 
             scrolled ? "opacity-100" : "opacity-0")}>
             <img 
-              src="/lovable-uploads/3a833654-d110-41b2-8a59-f2e3c89f2c4c.png" 
+              src="/lovable-uploads/9040b7ae-4b7c-44cf-baf4-9d8d558470a0.png" 
               alt="500BITY" 
               className="h-full brightness-0"
             />

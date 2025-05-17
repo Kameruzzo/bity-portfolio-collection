@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Instagram, Mail } from "lucide-react";
 
@@ -21,7 +22,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="h-10">
               <img 
-                src="/lovable-uploads/65914150-5be4-4237-8abb-91492cc8963d.png" 
+                src="/lovable-uploads/9040b7ae-4b7c-44cf-baf4-9d8d558470a0.png" 
                 alt="500BITY" 
                 className="h-full object-contain"
               />
