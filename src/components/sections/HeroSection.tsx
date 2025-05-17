@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
 
@@ -43,8 +44,8 @@ const HeroSection: React.FC = () => {
       {/* Full-screen background image */}
       <div className="absolute inset-0 w-full h-full">
         <img 
-          src="/lovable-uploads/1be9282b-0d6c-4883-a885-7a584d31083e.png" 
-          alt="Blue backdrop with figure" 
+          src="/lovable-uploads/98001d01-b5f7-4eb0-90df-913a0d3e4ff6.png" 
+          alt="Orange digital background with South America fingerprint" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/20"></div> {/* Optional overlay for better text readability */}
