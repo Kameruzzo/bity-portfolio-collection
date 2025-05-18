@@ -37,23 +37,13 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-center">
         {/* Centered logo */}
         <div className="flex items-center justify-center relative h-10">
-          {/* White logo (visible when not scrolled) */}
-          <a href="#inicio" className={cn("h-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300", 
-            scrolled ? "opacity-0" : "opacity-100")}>
+          {/* Logo (visible when not scrolled) */}
+          <a href="#inicio" className="h-10 flex items-center justify-center">
             <img 
               src="/lovable-uploads/9040b7ae-4b7c-44cf-baf4-9d8d558470a0.png" 
               alt="500BITY" 
-              className="h-full"
-            />
-          </a>
-          
-          {/* Black logo (visible when scrolled) */}
-          <a href="#inicio" className={cn("h-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300", 
-            scrolled ? "opacity-100" : "opacity-0")}>
-            <img 
-              src="/lovable-uploads/9040b7ae-4b7c-44cf-baf4-9d8d558470a0.png" 
-              alt="500BITY" 
-              className="h-full brightness-0"
+              className={cn("h-full transition-opacity duration-300",
+                scrolled ? "brightness-0" : "")}
             />
           </a>
         </div>

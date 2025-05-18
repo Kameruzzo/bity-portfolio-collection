@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
           alt="Digital background" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/70"></div> {/* Increased shadow overlay for better visibility */}
+        <div className="absolute inset-0 bg-black/50"></div> {/* Lighter shadow overlay (changed from 70% to 50% opacity) */}
       </div>
       
       {/* Content */}
