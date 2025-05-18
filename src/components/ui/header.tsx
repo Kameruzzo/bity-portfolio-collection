@@ -34,10 +34,9 @@ export function Header() {
           : "py-6 bg-[#FF5722]/80"
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <div className="flex-1"></div> {/* Spacer for centering logo */}
-        
-        <div className="flex items-center justify-center flex-1 relative h-10">
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-center">
+        {/* Centered logo */}
+        <div className="flex items-center justify-center relative h-10">
           {/* White logo (visible when not scrolled) */}
           <a href="#inicio" className={cn("h-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300", 
             scrolled ? "opacity-0" : "opacity-100")}>
@@ -57,23 +56,6 @@ export function Header() {
               className="h-full brightness-0"
             />
           </a>
-        </div>
-
-        <div className="flex-1 flex justify-end">
-          <nav className="flex items-center space-x-8">
-            {["inicio", "quem-somos", "servicos", "contato", "faq"].map((section) => (
-              <button
-                key={section}
-                onClick={() => scrollToSection(section)}
-                className={cn(
-                  "transition-colors font-medium hidden md:block",
-                  scrolled ? "text-white hover:text-white/80" : "text-white hover:text-white/80"
-                )}
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1).replace("-", " ")}
-              </button>
-            ))}
-          </nav>
         </div>
       </div>
     </header>
