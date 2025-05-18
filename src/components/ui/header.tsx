@@ -30,8 +30,8 @@ export function Header() {
       className={cn(
         "fixed w-full top-0 z-50 transition-all duration-300",
         scrolled
-          ? "py-4 bg-gray-200/90 backdrop-blur-md shadow-md"
-          : "py-6 bg-transparent"
+          ? "py-4 bg-[#FF5722]/90 backdrop-blur-md shadow-md"
+          : "py-6 bg-[#FF5722]/80"
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
@@ -67,7 +67,7 @@ export function Header() {
                 onClick={() => scrollToSection(section)}
                 className={cn(
                   "transition-colors font-medium hidden md:block",
-                  scrolled ? "text-black hover:text-bity-600" : "text-white hover:text-bity-600"
+                  scrolled ? "text-white hover:text-white/80" : "text-white hover:text-white/80"
                 )}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1).replace("-", " ")}

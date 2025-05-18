@@ -120,6 +120,15 @@
   .btn-secondary {
     @apply px-6 py-3 bg-transparent border border-black text-black font-medium rounded-full transition-all duration-300 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2;
   }
+
+  /* New styles for better text visibility */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  }
 }
 
 /* Custom scrollbar */

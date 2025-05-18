@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
           alt="Digital background" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/20"></div> {/* Optional overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50"></div> {/* Darker overlay for better text readability */}
       </div>
       
       {/* Content */}
@@ -57,27 +57,29 @@ const HeroSection: React.FC = () => {
         className="container relative z-10 px-4 sm:px-6 text-center"
         style={heroContentStyle}
       >
-        <h2 className="text-2xl md:text-4xl lg:text-5xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed">
-          O Jeito Sul-Americano de Fazer Publicidade
-        </h2>
-        
-        <p className="text-white/80 max-w-xl mx-auto mb-12">
-          Transformamos ideias em campanhas que capturam a essência da sua marca e conectam com seu público de forma autêntica e impactante.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button 
-            className="btn-primary"
-            onClick={() => scrollToSection('servicos')}
-          >
-            Nossos Serviços
-          </button>
-          <button 
-            className="btn-secondary"
-            onClick={() => scrollToSection('contato')}
-          >
-            Entre em Contato
-          </button>
+        <div className="bg-black/30 backdrop-blur-sm p-6 md:p-10 rounded-xl shadow-xl max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
+            O Jeito Sul-Americano de Fazer Publicidade
+          </h2>
+          
+          <p className="text-white max-w-xl mx-auto mb-12 drop-shadow-md text-lg">
+            Transformamos ideias em campanhas que capturam a essência da sua marca e conectam com seu público de forma autêntica e impactante.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button 
+              className="btn-primary shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"
+              onClick={() => scrollToSection('servicos')}
+            >
+              Nossos Serviços
+            </button>
+            <button 
+              className="btn-secondary bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white/20 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"
+              onClick={() => scrollToSection('contato')}
+            >
+              Entre em Contato
+            </button>
+          </div>
         </div>
       </div>
       
@@ -86,7 +88,7 @@ const HeroSection: React.FC = () => {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce cursor-pointer text-center"
         onClick={scrollToNext}
       >
-        <ArrowDown className="text-white h-8 w-8 mx-auto" />
+        <ArrowDown className="text-white h-8 w-8 mx-auto drop-shadow-lg" />
       </div>
     </section>
   );
