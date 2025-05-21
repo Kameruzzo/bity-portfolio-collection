@@ -40,7 +40,7 @@ export function Header() {
           {/* Logo (visible when not scrolled) */}
           <a href="#inicio" className="h-10 flex items-center justify-center">
             <img 
-              src="/lovable-uploads/187c763d-114d-4f7d-8c81-05a7e3c46a4f.png" 
+              src="/lovable-uploads/9e576f5a-759a-409f-8c08-89558e2dcd2f.png" 
               alt="500BITY" 
               className={cn("h-full transition-opacity duration-300",
                 scrolled ? "brightness-0" : "")}
