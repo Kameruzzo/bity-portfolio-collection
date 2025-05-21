@@ -58,15 +58,15 @@ const HeroSection: React.FC = () => {
         style={heroContentStyle}
       >
         <div className="bg-black/20 backdrop-blur-sm p-8 md:p-12 rounded-2xl border border-white/10 shadow-2xl max-w-4xl mx-auto">
-          <div className="mb-6">
+          <div className="mb-8">
             <img 
-              src="/lovable-uploads/9040b7ae-4b7c-44cf-baf4-9d8d558470a0.png" 
-              alt="500BITY" 
-              className="h-16 mx-auto mb-6"
+              src="/lovable-uploads/187c763d-114d-4f7d-8c81-05a7e3c46a4f.png" 
+              alt="500BITY ECOSSISTEMA" 
+              className="h-24 md:h-32 mx-auto"
             />
           </div>
           
-          <h2 className="text-3xl md:text-5xl lg:text-6xl text-white font-light mb-8 max-w-3xl mx-auto leading-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl text-white font-medium mb-6 max-w-3xl mx-auto leading-tight tracking-wide">
             O Jeito Sul-Americano de Fazer Publicidade
           </h2>
           
