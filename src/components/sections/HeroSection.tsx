@@ -44,11 +44,11 @@ const HeroSection: React.FC = () => {
       {/* Full-screen background image with shadow overlay */}
       <div className="absolute inset-0 w-full h-full">
         <img 
-          src="/lovable-uploads/98001d01-b5f7-4eb0-90df-913a0d3e4ff6.png" 
-          alt="Digital background" 
+          src="/lovable-uploads/ed6a646e-9028-4950-8e58-ca254dc100a5.png" 
+          alt="Digital South America" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50"></div> {/* Lighter shadow overlay (changed from 70% to 50% opacity) */}
+        <div className="absolute inset-0 bg-black/50"></div> {/* Keeping the 50% opacity overlay */}
       </div>
       
       {/* Content */}
@@ -58,11 +58,11 @@ const HeroSection: React.FC = () => {
         style={heroContentStyle}
       >
         <div className="bg-black/30 backdrop-blur-sm p-6 md:p-10 rounded-xl shadow-xl max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl text-white font-light mb-8 max-w-3xl mx-auto leading-relaxed">
             O Jeito Sul-Americano de Fazer Publicidade
           </h2>
           
-          <p className="text-white max-w-xl mx-auto mb-12 drop-shadow-md text-lg">
+          <p className="text-white max-w-xl mx-auto mb-12 text-lg">
             Transformamos ideias em campanhas que capturam a essência da sua marca e conectam com seu público de forma autêntica e impactante.
           </p>
           
@@ -88,7 +88,7 @@ const HeroSection: React.FC = () => {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce cursor-pointer text-center"
         onClick={scrollToNext}
       >
-        <ArrowDown className="text-white h-8 w-8 mx-auto drop-shadow-lg" />
+        <ArrowDown className="text-white h-8 w-8 mx-auto" />
       </div>
     </section>
   );
